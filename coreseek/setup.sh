@@ -1,4 +1,4 @@
-#!/usr/bash
+#!/bin/bash
 cd /coreseek/mmseg-3.2.14
 ./bootstrap
 ./configure --prefix=/usr/local/mmseg3
