@@ -1,7 +1,7 @@
 FROM centos:6
 MAINTAINER qiyuan
 COPY coreseek/coreseek-4.1.tar.gz /coreseek/coreseek-4.1.tar.gz
-RUN mkdir /var/cache/yum/x86_64/6/base && mkdir /var/cache/yum/x86_64/6/extras && mkdir /var/cache/yum/x86_64/6/updates \
+RUN mkdir -p /var/cache/yum/x86_64/6/base && mkdir -p /var/cache/yum/x86_64/6/extras && mkdir -p /var/cache/yum/x86_64/6/updates \
 	&& touch /var/cache/yum/x86_64/6/base/mirrorlist.txt && touch /var/cache/yum/x86_64/6/extras/mirrorlist.txt \
 	&& touch /var/cache/yum/x86_64/6/updates/mirrorlist.txt \
 	&& echo "http://vault.centos.org/6.10/os/x86_64/" > /var/cache/yum/x86_64/6/base/mirrorlist.txt \
