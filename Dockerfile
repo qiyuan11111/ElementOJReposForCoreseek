@@ -11,4 +11,3 @@ RUN mkdir -p /var/cache/yum/x86_64/6/base && mkdir -p /var/cache/yum/x86_64/6/ex
 	&& yum install -y make gcc g++ gcc-c++ libtool autoconf automake imake mysql-devel libxml2-devel expat-devel \
 	&& cd /coreseek && tar -zxvf /coreseek/coreseek-4.1.tar.gz
 EXPOSE 9312
-CMD ["/bin/sh", "/coreseek/start.sh"] 
