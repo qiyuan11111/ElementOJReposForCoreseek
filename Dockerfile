@@ -9,7 +9,7 @@ RUN mkdir -p /var/cache/yum/x86_64/6/base && mkdir -p /var/cache/yum/x86_64/6/ex
 	&& echo "http://vault.centos.org/6.10/updates/x86_64/" > /var/cache/yum/x86_64/6/updates/mirrorlist.txt \
 	&& yum install -y make gcc g++ gcc-c++ libtool autoconf automake imake mysql-devel libxml2-devel expat-devel \
 	&& cd /coreseek && tar -zxvf /coreseek/coreseek-4.1.tar.gz && cd /coreseek/mmseg-3.2.14 \
-	&& ./bootstrap && ./configure --prefix=/usr/local/mmseg3 && make && make install && cd cd /coreseek/coreseek-4.1/csft-4.1 \
+	&& ./bootstrap && ./configure --prefix=/usr/local/mmseg3 && make && make install && cd /coreseek/csft-4.1 \
 	&& sh buildconf.sh && ./configure --prefix=/usr/local/coreseek --without-unixodbc --with-mmseg --with-mmseg-includes=/usr/local/mmseg3/include/mmseg/ --with-mmseg-libs=/usr/local/mmseg3/lib/ --with-mysql \
 	&& make && make install
 EXPOSE 9312
