@@ -1,4 +1,5 @@
 #!/bin/bash
+chmod -R 777 /coreseek
 cd /coreseek/mmseg-3.2.14
 ./bootstrap
 ./configure --prefix=/usr/local/mmseg3

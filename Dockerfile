@@ -8,7 +8,7 @@ RUN mkdir -p /var/cache/yum/x86_64/6/base && mkdir -p /var/cache/yum/x86_64/6/ex
 	&& echo "http://vault.centos.org/6.10/os/x86_64/" > /var/cache/yum/x86_64/6/base/mirrorlist.txt \
 	&& echo "http://vault.centos.org/6.10/extras/x86_64/" > /var/cache/yum/x86_64/6/extras/mirrorlist.txt \
 	&& echo "http://vault.centos.org/6.10/updates/x86_64/" > /var/cache/yum/x86_64/6/updates/mirrorlist.txt \
-	&& yum install -y make gcc g++ gcc-c++ libtool autoconf automake imake mysql-devel libxml2-devel expat-devel \
+	&& yum install -y make gcc g++ gcc-c++ libtool autoconf automake imake mysql-devel libxml2-devel expat-devel sudo \
 	&& cd /coreseek && tar -zxvf /coreseek/coreseek-4.1.tar.gz
 EXPOSE 9312
 ENTRYPOINT ["/bin/sh", "/coreseek/setup.sh"] 
